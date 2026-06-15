@@ -1,0 +1,514 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 60px;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+footer {
+    background-color: darkslategrey;
+    margin-top: auto;
+
+}
+
+/*MENU NORMAL*/
+nav {
+
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*MENU CUANDO HACES SCROLL*/
+nav.scrolled {
+    background-color: rgb(179, 199, 197);
+}
+
+.contenido {
+    display: none;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#home {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.4)),
+        url("camposoto1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/*INICIO*/
+
+.contenido-inicio {
+    max-width: 700px;
+    margin: auto;
+}
+
+.frase {
+    font-style: italic;
+    color: #444;
+}
+
+.autor {
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.descripcion {
+    color: #555;
+}
+
+/*CLINICA*/
+.bloque {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin-bottom: 80px;
+}
+
+.texto {
+    width: 70%;
+
+}
+
+.imagen {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bloque:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+#clinica h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#equipo {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/*Contenedor de tarjetas*/
+.tarjetas-equipo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/*Tarjeta individual*/
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Imagen*/
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+
+}
+
+.card p {
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/*TRATAMIENTOS*/
+.dropdown {
+    position: relative;
+}
+
+/*submenu oculto*/
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/*Items del submenu*/
+.submenu li {
+    padding: 10px 20px;
+}
+
+/*Enlaces*/
+.submenu a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+/*Hover*/
+.submenu li:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+}
+
+#tratamientos h2 {
+    margin-left: 40px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tratamiento-contenido {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1000px;
+    align-items: center;
+    margin: auto;
+
+
+}
+
+.tratamiento-imagen {
+    display: flex;
+    align-items: center;
+}
+
+.tratamiento-imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.tratamiento-texto {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tratamiento-texto p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.tratamiento:nth-child(even) {
+    background-color:#eef6fb;
+}
+
+.tratamiento {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:all 0.8s ease;
+    padding: 60px 20px;
+}
+
+.tratamiento.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tratamiento-imagen img:hover {
+    transform:scale(1.05)translateY(-5px)
+}
+
+.endodoncia {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+
+.implantes {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color:darkslategray;
+    border-bottom: 2px solid hsl(158, 70%, 53%);
+    padding-bottom: 5px;
+
+}
+
+
+.estetica {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color:burlywood;
+    border-bottom: 2px solid orchid;
+    padding-bottom: 5px;
+
+}
+
+.ortodoncia {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color:#2c3e50;
+    border-bottom: 2px solid burlywood;
+    padding-bottom: 5px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*CONTACTO*/
+#contacto {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+#contacto h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/*Contenedor en columnas*/
+.contacto-contenido {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
+}
+
+/*MAPA*/
+.mapa {
+    width: 50%;
+}
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*INFO*/
+.info-contacto {
+    width: 50%;
+}
+.info-contacto h3 {
+    margin-bottom: 10px;
+}
+.info-contacto h4 {
+    margin-top: 20px;
+}
+
+/*REDES*/
+.redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.redes a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:#3498db;
+    font-weight: bold;
+    gap: 8px;
+}
+.redes img {
+    width: 35px;
+    transition: 0.3s;
+
+}
+.redes img:hover {
+transform: scale(1.1);
+} 
+
+/*MEDIA QUERYS*/
+@media (max-width:768px) {
+    .contacto-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bloque {
+        flex-direction: column;
+        text-align: center;
+    }
+    .texto {
+        width: 100%;
+    }
+    .imagen {
+        width: 100%;
+    }
+    .tarjetas-equipo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tratamiento-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tratamiento-texto {
+        max-width: 100%;
+    }
+    .mapa {
+        width: 100%;
+    }
+    .info-contacto {
+        width: 100%;
+        text-align: center;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    
+
+}   
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color:#2c3e50;
+    padding: 5px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp img {
+    width: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.whatsapp img:hover {
+    transform: scale(1.1);
+}
