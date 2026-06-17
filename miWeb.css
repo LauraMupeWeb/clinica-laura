@@ -432,6 +432,14 @@ html {
 transform: scale(1.1);
 } 
 
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color:red;
+    background: yellow;
+}
+
 /*MEDIA QUERYS*/
 @media (max-width:768px) {
     .contacto-contenido {
@@ -491,13 +499,7 @@ transform: scale(1.1);
 
 }   
 
-.menu-toggle {
-    display: none;
-    font-size: 32px;
-    cursor: pointer;
-    color:red;
-    background: yellow;
-}
+
 
 .whatsapp {
     position: fixed;
