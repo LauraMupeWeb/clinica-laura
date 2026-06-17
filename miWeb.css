@@ -436,8 +436,8 @@ transform: scale(1.1);
     display: none;
     font-size: 32px;
     cursor: pointer;
-    color:red;
-    background: yellow;
+    color:white;
+    background: #2c3e50;
 }
 
 /*MEDIA QUERYS*/
