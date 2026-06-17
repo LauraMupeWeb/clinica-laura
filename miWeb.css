@@ -81,6 +81,7 @@ nav {
     border-bottom: 1px solid #ddd;
     padding: 10px 40px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /*MENU CUANDO HACES SCROLL*/
@@ -467,6 +468,7 @@ transform: scale(1.1);
     }
     nav {
         justify-content: space-between;
+        z-index: 1000;
     }
     nav ul {
         flex-direction: column;
@@ -477,6 +479,7 @@ transform: scale(1.1);
         top: 70px;
         left: 0;
         padding: 20px;
+        z-index: 999;
     }
     nav ul.active {
         display: flex;
@@ -490,10 +493,10 @@ transform: scale(1.1);
 
 .menu-toggle {
     display: none;
-    font-size: 30px;
+    font-size: 32px;
     cursor: pointer;
-    color:#2c3e50;
-    padding: 5px;
+    color:red;
+    background: yellow;
 }
 
 .whatsapp {
